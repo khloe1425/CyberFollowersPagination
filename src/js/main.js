@@ -17,7 +17,6 @@ const init = async() => {
     const data = await fecthData()
     pages = paginate(data)
     setUI();
-    console.log(data)
 }
 page.addEventListener('click', (p) => {
     if (p.target.classList.contains('page')) return
@@ -38,4 +37,5 @@ page.addEventListener('click', (p) => {
     }
     setUI();
 })
-window.addEventListener('load', init)
+
+init();
